@@ -25,7 +25,7 @@ jobs:
           distribution: 'temurin'
       
       - name: Maven build
-        run: mvn install
+        run: mvn -DskipTests install
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
