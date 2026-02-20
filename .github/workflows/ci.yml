@@ -22,8 +22,8 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 21
-          distribution: 'temurin'
-      
+          distribution: "temurin"
+
       - name: Maven build
         run: mvn -DskipTests install
 
@@ -43,7 +43,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 21
-          distribution: 'temurin'
-      
+          distribution: "temurin"
+
       - name: Maven test
         run: mvn test
