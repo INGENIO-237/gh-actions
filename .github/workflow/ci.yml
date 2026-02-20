@@ -19,7 +19,13 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Maven build
-        run: mvn build
+        run: mvn install
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: application
+          path: target/*.jar
   test:
     needs: build
     runs-on: ubuntu-latest
